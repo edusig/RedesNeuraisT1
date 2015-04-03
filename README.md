@@ -13,12 +13,17 @@ Trabalho 1 de Redes Neurais
 
 ###Documentação
 Tutoriais:
-[https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/]
-[http://stackoverflow.com/questions/23942112/perceptron-learning-algorithm-taking-a-lot-of-iterations-to-converge]
-[http://glowingpython.blogspot.com.br/2011/10/perceptron.html]
+
+https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/
+
+http://stackoverflow.com/questions/23942112/perceptron-learning-algorithm-taking-a-lot-of-iterations-to-converge
+
+http://glowingpython.blogspot.com.br/2011/10/perceptron.html
 
 
-Explicação extensa de como resolver o nosso trabalho [http://neuralnetworksanddeeplearning.com/chap1.html]
+Explicação extensa de como resolver o nosso trabalho 
+
+http://neuralnetworksanddeeplearning.com/chap1.html
 
 ###TODO
 - Conseguir especificação das entradas
