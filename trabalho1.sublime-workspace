@@ -1,0 +1,413 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"id",
+				"idx2"
+			],
+			[
+				"re",
+				"reduce_to_leaf"
+			],
+			[
+				"le",
+				"leafs"
+			],
+			[
+				"remove",
+				"remove_duplicates"
+			],
+			[
+				"remo",
+				"remove_void_cols"
+			],
+			[
+				"void",
+				"void_row"
+			],
+			[
+				"v",
+				"void_rows"
+			],
+			[
+				"vo",
+				"void_row"
+			],
+			[
+				"np",
+				"npgrid"
+			],
+			[
+				"omi",
+				"omino_grid"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"gr",
+				"grid"
+			],
+			[
+				"new",
+				"newgrid"
+			],
+			[
+				"prin",
+				"print_tree"
+			],
+			[
+				"grid",
+				"grid"
+			],
+			[
+				"diner",
+				"diners"
+			],
+			[
+				"st",
+				"standing"
+			],
+			[
+				"aud",
+				"audience_list"
+			],
+			[
+				"tra",
+				"training_data"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"w",
+				"walk"
+			],
+			[
+				"ip",
+				"ipnumbers"
+			],
+			[
+				"max",
+				"maxnumbers"
+			],
+			[
+				"min",
+				"minnumbers"
+			],
+			[
+				"sum",
+				"sum_string_length"
+			],
+			[
+				"ten",
+				"tenth"
+			],
+			[
+				"co",
+				"countRight"
+			],
+			[
+				"coun",
+				"countDown"
+			],
+			[
+				"count",
+				"count"
+			],
+			[
+				"gre",
+				"greatest_chain"
+			],
+			[
+				"send",
+				"sendErrorImage"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"gri",
+				"gridtxt"
+			],
+			[
+				"sie",
+				"sievebound"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"color",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1"
+	],
+	"file_history":
+	[
+		"/Users/edusig/NetBeansProjects/Trabalho1/out.bin",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/Trabalho 1/main.py",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/Trabalho 1/in.txt",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/Trabalho 1/decode.cpp",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/Trabalho 1/encode.cpp",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/decode.cpp",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Multimidia/encode.cpp",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem04/in.txt",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem04/small.in",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem04/out.txt",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem02/main.py",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem03/main.py",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem02/in.txt",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem02/in2.txt",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem02/small.in",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem02/out.txt",
+		"/Users/edusig/Downloads/sub-3.in",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem01/in.txt",
+		"/Users/edusig/Dropbox/Programming/Google Code Jam/Problem01/main.py",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Topicos Especiais BD/BD_AULA03",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Topicos Especiais BD/BD_AULA04.md",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1/network.py",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1/perceptron.py",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1/README.md",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1/main.py",
+		"/Users/edusig/Dropbox/_USP/Disciplinas/Redes Neurais/RedesNeuraisT1/.gitignore",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem06/PracticeInput.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem06/Validating-IP-addresses_InputForSubmission_1.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem02/PracticeInput(1).txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem02/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem06/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem018/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/microsoft/problem06/out.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem020/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem021/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem019/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem024/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem018/triangle.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem013/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem014/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem017/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem016/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem015/main.py",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/theme/css/index.css",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/views/pages/inicio.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/controllers/pages.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/views/pages/empresa.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/views/header.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/.htaccess",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/adaptive-images.php",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem013/number.txt",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/404.php",
+		"/Users/edusig/error_log",
+		"/Users/edusig/ftp.teste.shanadu.com.br-ftp_log-Jan-2015",
+		"/Users/edusig/teste.shanadu.com.br-Feb-2015",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/.htaccess",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/docroot.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/views/pages/404.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/config/config.php",
+		"/Users/edusig/Dropbox/Web Server/Shanadu/CodeIgniter-2.2-stable/application/config/constants.php",
+		"/Users/edusig/Dropbox/Dicas escrita cientifica",
+		"/Users/edusig/Dropbox/_USP/Iniciacao Cientifica/Arquitetura/Relatorio.TODO",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem012/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/grid.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/randomgrid.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/alternativeteste.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/grid4.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem011/grid2.txt",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem010/sieve.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem010/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem009/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem9/main.py",
+		"/Users/edusig/Dropbox/Programming/Challanges/Euler Project/Problem9/old_slow.py",
+		"/Users/edusig/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/edusig/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"std::",
+			"Leaf",
+			"):\n",
+			"\",\"",
+			"r",
+			"readfile",
+			"2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"\", \""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 118.0
+	},
+	"project": "trabalho1.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
