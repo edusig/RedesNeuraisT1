@@ -6,52 +6,91 @@ class Network():
         self.num_layer = len(sizes)
         self.sizes = sizes
 
-        #Inicializa os pesos do bias de todas as conexoes aleatoriamente
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        # Conecta todos os perceptrons com todos os outros da camada anterior e adiciona os bias
+        self.weights = [np.random.randn(y, x+1) * 0.25 for x, y in zip(sizes[:-1], sizes[1:])]
 
-        #Conecta todos os perceptrons com todos os outros da camada anterior
-        self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
-        print(self.biases)
-        for layer in self.weights:
-            for p in layer:
-                print(p)
-            print
+    def SGD(self, input, result, lrate, iterations):
+        for i in range(iterations):
+            if(i % 100 == 0):
+                print(i)
+            # Escolhe um valor de entrada aleatorio
+            k = np.random.randint(len(input))
 
-    def feedforward(self, inputs, weights, bias):
-        activation = self.sigmoid(sum(np.dot(inputs, weights)) + bias)
-        return activation
+            data = input[k]
+            target = result[k][0]
 
-    def backpropagation(self, deltas, lrate, data):
-        errors = [deltas]
-        for l in range(1, self.num_layer-1):
-            newdeltas = []
-            for p in range(len(self.weights[l])):
-                newdeltas.append(sum([x * y for x, y in zip(self.weights[-l][p], deltas)]))
-            errors.append(newdeltas)
-        errors.reverse()
-        for l in range(1, self.num_layer):
-            for p in range(len(self.weights[l])):
-                for w in range(len(self.weights[l][p])):
-                    self.weights[l][p][w] = self.weights[l][p][w] + lrate * (deltas[l][p] * sigmoid_prime(data[l][p]) * data[l-1][p])
-        return
+            # Cria uma matriz do tamanho dos dados com uma linha a mais.
+            temp = np.ones([data.shape[0] + 1, data.shape[1]])
+            # Copia os valores do input para todas as linhas menos a ultima que e o bias.
+            temp[0:-1, :] = data
+            # Copia de volta para o input essa nova matriz com o bias adicionado
+            data = temp.T
 
-    def gradient(self, input, lrate, epochs):
-        target = input[1]
-        for e in range(epochs):
-            data = input[0]
-            for layer in range(1, self.num_layer-1):
-                a = []
+            # Adiciona o valor de entrada como primeiro valor da ativacao
+            a = [data]
+
+            # Para cada camada, multiplica os pesos pelas entradas e adiciona
+            # no vetor "a" que representa a ativacao e entradas para a proxima camada.
+            for layer in range(len(self.weights)):
+                temp = []
                 for p in range(len(self.weights[layer])):
-                    a.append(self.feedforward(data[layer-1], self.weights[layer-1][p], self.bias[layer-1][p]))
-                data.append(a)
-            #mse = sum([pow(x - y) for x, y in zip(data[-1], target)]) / 2
-            deltas = [x - y for x, y in zip(data[-1], target)]
-            self.backpropagation(deltas, lrate, data)
+                    temp.append(self.sigmoid(np.dot(a[layer][0], self.weights[layer][p])))
+                if layer < self.num_layer-2:
+                    temp.append(1)
+                tempa = np.array([temp])
+                a.append(tempa)
 
-        return
+            # Compara saida esperada com a saida dessa entrada aleatoria
+            output = a[-1][0]
+            error = target - output
+
+            # Calcula os erros de cada perceptron da camada de saida
+            prime = self.sigmoid_prime(output)
+            deltas = [error * self.sigmoid_prime(output)]
+
+            # Comecando da penultima camada calculamos os erros
+            # das camadas anteriores já calculando com a derivada da ativacao
+            for layer in range(len(a) - 2, 0, -1):
+                deltas.append(deltas[-1].dot(self.weights[layer]) * self.sigmoid_prime(a[layer][0]))
+
+            # Inverte os erros, comecando agora da primeira camada
+            deltas.reverse()
+
+            # Passa por cada perceptron de cada camada arrumando
+            # todos os pesos das conexoes ligadas a ele
+            for k in range(len(self.weights)):
+                for p in range(len(self.weights[k])):
+                    for c in range(len(self.weights[k][p])):
+                        self.weights[k][p][c] += lrate * deltas[k][p]
+
+    def process(self, x):
+
+        # Cria uma matriz do tamanho dos dados com uma linha a mais.
+        temp = np.ones([x.shape[0] + 1, x.shape[1]])
+        # Copia os valores do input para todas as linhas menos a ultima que e o bias.
+        temp[0:-1, :] = x
+        # Copia de volta para o input essa nova matriz com o bias adicionado
+        x = temp.T
+
+        # Adiciona o valor de entrada como primeiro valor da ativacao
+        a = [x]
+
+        # Segue o mesmo principio do aprendizado, dessa vez memorizando apenas
+        # a saida a ultima camada.
+        for layer in range(len(self.weights)):
+            temp = []
+            for p in range(len(self.weights[layer])):
+                temp.append(self.sigmoid(np.dot(a[0], self.weights[layer][p])))
+            if layer < self.num_layer-2:
+                temp.append(1)
+            tempa = np.array([temp])
+            a = tempa
+
+        return a
+
 
     def sigmoid(self, x):
-        return 1.0/(1.0 + np.exp(-x))
+        return 1.0 / (1.0 + np.exp(-x))
 
     def sigmoid_prime(self, x):
         return self.sigmoid(x) * (1 - self.sigmoid(x))
