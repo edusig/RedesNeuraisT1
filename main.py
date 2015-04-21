@@ -31,8 +31,8 @@ def vectorized_result(j):
 
 training_inputs, training_results, validation_inputs, validation_results, test_inputs, test_results = load_data_wrapper()
 n = Network([784, 300, 10])
-n.SGD(training_inputs[:3000], training_results[:3000], 0.3, 5000)
-for i in range(5):
+n.SGD(training_inputs[:15000], training_results[:15000], 0.3, 7000)
+for i in range(500):
     k = np.random.randint(len(validation_inputs))
     result = n.process(validation_inputs[i])
-    print("CASE #{}:\n input[{}] = {} \n\n Expected = {}\n\n\n".format(i, k, result, validation_results[k]))
+    print("CASE #{}:\n input[{}] = {} \nExpected = {}\n\n".format(i, k, result, validation_results[k]))

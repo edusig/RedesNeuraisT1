@@ -11,8 +11,6 @@ class Network():
 
     def SGD(self, input, result, lrate, iterations):
         for i in range(iterations):
-            if(i % 100 == 0):
-                print(i)
             # Escolhe um valor de entrada aleatorio
             k = np.random.randint(len(input))
 
@@ -42,26 +40,34 @@ class Network():
 
             # Compara saida esperada com a saida dessa entrada aleatoria
             output = a[-1][0]
+            if(i % 100 == 0):
+                print(i)
+
             error = target - output
 
             # Calcula os erros de cada perceptron da camada de saida
-            prime = self.sigmoid_prime(output)
-            deltas = [error * self.sigmoid_prime(output)]
+            deltas = [error]
 
             # Comecando da penultima camada calculamos os erros
             # das camadas anteriores já calculando com a derivada da ativacao
             for layer in range(len(a) - 2, 0, -1):
-                deltas.append(deltas[-1].dot(self.weights[layer]) * self.sigmoid_prime(a[layer][0]))
+                deltas.append(deltas[-1].dot(self.weights[layer]))
 
             # Inverte os erros, comecando agora da primeira camada
             deltas.reverse()
 
             # Passa por cada perceptron de cada camada arrumando
             # todos os pesos das conexoes ligadas a ele
-            for k in range(len(self.weights)):
-                for p in range(len(self.weights[k])):
-                    for c in range(len(self.weights[k][p])):
-                        self.weights[k][p][c] += lrate * deltas[k][p]
+            for layer in range(len(self.weights)):
+                # Pre carrega os inputs do layer para otimazar loop
+                linput = a[layer][0]
+                for perceptron in range(len(self.weights[layer])):
+                    # Pre calcula a differenca do perceptron para otimizar loop
+                    diff = lrate * deltas[layer][perceptron] * self.sigmoid_prime(a[layer+1][0][perceptron])
+                    for connection in range(len(self.weights[layer][perceptron])):
+                        #Aplica a derivada da ativação e a entrada da camada nessa diferenca
+                        change = diff * linput[connection]
+                        self.weights[layer][perceptron][connection] += change
 
     def process(self, x):
 
