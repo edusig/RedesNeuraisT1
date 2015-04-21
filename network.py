@@ -49,7 +49,7 @@ class Network():
             deltas = [error]
 
             # Comecando da penultima camada calculamos os erros
-            # das camadas anteriores já calculando com a derivada da ativacao
+            # das camadas anteriores ja calculando com a derivada da ativacao
             for layer in range(len(a) - 2, 0, -1):
                 deltas.append(deltas[-1].dot(self.weights[layer]))
 
@@ -65,7 +65,7 @@ class Network():
                     # Pre calcula a differenca do perceptron para otimizar loop
                     diff = lrate * deltas[layer][perceptron] * self.sigmoid_prime(a[layer+1][0][perceptron])
                     for connection in range(len(self.weights[layer][perceptron])):
-                        #Aplica a derivada da ativação e a entrada da camada nessa diferenca
+                        #Aplica a derivada da ativacao e a entrada da camada nessa diferenca
                         change = diff * linput[connection]
                         self.weights[layer][perceptron][connection] += change
 

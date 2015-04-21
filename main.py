@@ -29,10 +29,28 @@ def vectorized_result(j):
     e[0][j] = 1.0
     return e
 
+
+def mse(output, target):
+    error = 0.0
+    target = vectorized_result(target)
+    for i in range(len(output[0])):
+        error += pow(abs(output[0][i] - target[0][i]), 2)
+    return error/2
+
 training_inputs, training_results, validation_inputs, validation_results, test_inputs, test_results = load_data_wrapper()
 n = Network([784, 300, 10])
-n.SGD(training_inputs[:15000], training_results[:15000], 0.3, 7000)
-for i in range(500):
+n.SGD(training_inputs, training_results, 0.3, 5000)
+
+totalerror = 0
+
+for i in range(10000):
     k = np.random.randint(len(validation_inputs))
-    result = n.process(validation_inputs[i])
+    result = n.process(validation_inputs[k])
+    erro = mse(result, validation_results[k])
+    totalerror += erro
+    print("Erro = {}".format(erro))
     print("CASE #{}:\n input[{}] = {} \nExpected = {}\n\n".format(i, k, result, validation_results[k]))
+
+avgerror = totalerror/10000
+right = 100 - avgerror*100
+print("Taxa de acerto: {}\nErro Médio: {}".format(right, avgerror))
